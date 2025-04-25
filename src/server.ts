@@ -5,8 +5,7 @@ import helmet from "helmet";
 import { routes } from "./routes";
 import { ProductRepository } from "./infrastructre/repository/ProductRepository";
 
-console.log(process.env.PORT)
-const  SERVER_PORT  = process.env.PORT || "3333";
+const  SERVER_PORT  = process.env.PORT || "3000";
 const productRepo = new ProductRepository();
 
 const app: Express = express();

@@ -12,29 +12,28 @@ routes.get(
 );
 
 routes.get(
-  
-  "/allProducts",
+  "/product",
   (req: Request, res: Response, next: NextFunction) => {
     return productController.handleAllProducts(req, res)
   }
 );
 
 routes.post(
-  "/createProdut",
+  "/produt",
   (req: Request, res: Response, next: NextFunction) => {
     return productController.handleCreateProduct(req, res)
   }
 );
 
 routes.put(
-  "/editProduct/:id",
+  "/product/:id",
   (req: Request, res: Response, next: NextFunction) => {
     return productController.handleEditProduct(req, res)
   }
 );
 
 routes.delete(
-  "/deleteProduct/:id",
+  "/product/:id",
   (req: Request, res: Response, next: NextFunction) => {
     return productController.handleDeleteProduct(req, res)
   }

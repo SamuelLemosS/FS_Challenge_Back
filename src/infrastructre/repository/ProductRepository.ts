@@ -38,9 +38,13 @@ export class ProductRepository{
 
     async createProduct(productData: any) {
         try {
+          const dataWithTimestamp = {
+            ...productData,
+            createdAt: admin.firestore.FieldValue.serverTimestamp()
+          };
           const docRef = await admin.firestore()
             .collection('Products')
-            .add(productData);
+            .add(dataWithTimestamp);
       
           return {
             message: 'Produto criado com sucesso.',
