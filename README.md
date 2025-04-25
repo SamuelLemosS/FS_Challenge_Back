@@ -23,15 +23,21 @@ path: /product
 
 ## Create
 method: Post \
-path: /product
+path: /product\
+body(obligatorily):\
+{
+    "name":string,
+    "price":number,
+    "description":string
+}
 
 ## Update
 method: Put \
-path: /product
+path: /product/:id
 
 ## Delete
 method: Delete \
-path: /product
+path: /product/:id
 
 # Libraries
 z, Router, cors, Firestore
